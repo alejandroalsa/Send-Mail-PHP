@@ -57,7 +57,6 @@ try {
     
     echo 'Mensaje Recibido';
     ob_end_clean();
-
     header("Location: index.php");
 
 } catch (Exception $e) {
