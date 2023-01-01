@@ -1,4 +1,8 @@
 <?php
+ob_start();
+error_reporting(E_ALL);
+session_start();
+    
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -50,6 +54,11 @@ try {
     $mail->send();
     
     $_SESSION["flash"] = ["email" => "{$_POST['email']}"];
+    
+    echo 'Mensaje enviado a Diwes';
+    ob_end_clean();
+
+    header("Location: index.php");
 
 } catch (Exception $e) {
     echo "No se pudo enviar el mensaje. Error de correo: {$mail->ErrorInfo}";
