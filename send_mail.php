@@ -55,7 +55,7 @@ try {
     
     $_SESSION["flash"] = ["email" => "{$_POST['email']}"];
     
-    echo 'Mensaje enviado a Diwes';
+    echo 'Mensaje Recibido';
     ob_end_clean();
 
     header("Location: index.php");
