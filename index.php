@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,7 +21,7 @@
       <div class="alert alert-success alert-dismissible  bg-success text-white fade show mt-3" role="alert">
         <i class="bi bi-check-circle-fill"></i>
         <strong>Mensaje Enviado!</strong> El mensaje a sido enviado correctamente a <strong><?= $_SESSION["flash"]["email"] ?>  
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
       <?php unset($_SESSION["flash"]) ?>
     <?php endif ?>
